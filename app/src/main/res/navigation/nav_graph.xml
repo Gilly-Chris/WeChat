@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_view"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.wechat.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment">
+
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_findUserFragment"
+            app:destination="@id/findUserFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_incomingRequestsFragment"
+            app:destination="@id/incomingRequestsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_contactsFragment"
+            app:destination="@id/contactsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.wechat.ui.profile.ProfileFragment"
+        android:label="ProfileFragment">
+        <action
+            android:id="@+id/action_profileFragment_to_findUserFragment"
+            app:destination="@id/findUserFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_differentUserProfile"
+            app:destination="@id/differentUserProfile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/findUserFragment"
+        android:name="com.example.wechat.ui.findUser.FindUserFragment"
+        android:label="find_user_fragment"
+        tools:layout="@layout/find_user_fragment">
+        <action
+            android:id="@+id/action_findUserFragment_to_differentUserProfile"
+            app:destination="@id/differentUserProfile">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/differentUserProfile"
+        android:name="com.example.wechat.ui.different_user_profile.DifferentUserProfileFragment"
+        android:label="DifferentUserProfile" />
+
+    <fragment
+        android:id="@+id/incomingRequestsFragment"
+        android:name="com.example.wechat.ui.incoming_requests.IncomingRequestsFragment"
+        android:label="IncomingRequestsFragment" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.example.wechat.ui.contacts.ContactsFragment"
+        android:label="ContactsFragment">
+        <action
+            android:id="@+id/action_contactsFragment_to_findUserFragment"
+            app:destination="@id/findUserFragment" />
+        <action
+            android:id="@+id/action_contactsFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.wechat.ui.chat.ChatFragment"
+        android:label="ChatFragment" />
+</navigation>

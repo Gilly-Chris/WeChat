@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_200">#63a4ff</color>
+    <color name="primary_500">#1976d2</color>
+    <color name="primary_700">#004ba0</color>
+    <color name="secondary_200"> #c37cd0</color>
+    <color name="secondary_500">#ab47bc</color>
+    <color name="secondary_700">#790e8b</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+<!--    addition-->
+    <color name="red">#EE4B4B</color>
+    <color name="blue">#3F51B5</color>
+    <color name="grey">#ACACAC</color>
+    <color name="semi_visibile_bg">#80ACACAC</color>
+    <color name="green">#61B163</color>
+</resources>

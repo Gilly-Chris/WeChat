@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.WeChat.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.WeChat.Button" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceLargeComponent">
+            @style/ShapeAppearance.MaterialComponents.LargeComponent
+        </item>
+        <item name="backgroundTint">@color/primary_500</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+    <style name="TextAppearance.WeChat.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>
