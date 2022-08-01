@@ -2,7 +2,7 @@ package com.example.wechat.ui.findUser
 
 import android.os.Bundle
 import android.view.*
-import android.widget.SearchView
+import androidx.appcompat.widget.SearchView
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -49,10 +49,10 @@ class FindUserFragment : Fragment(){
 
         adapter = UsersAdapter(UserClickListener { clickedUser ->
             val gson = Gson()
-            val clickedUser = gson.toJson(clickedUser)
+            val userClicked = gson.toJson(clickedUser)
 
             val bundle = bundleOf(
-                CLICKED_USER to clickedUser
+                CLICKED_USER to userClicked
             )
             findNavController().navigate(
                 R.id.action_findUserFragment_to_differentUserProfile,
@@ -69,5 +69,31 @@ class FindUserFragment : Fragment(){
         val searchItem = menu.findItem(R.id.action_search)
         val searchView = searchItem?.actionView as SearchView
 
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(queryString: String?): Boolean {
+                adapter.filter.filter(queryString)
+                return false
+            }
+
+            override fun onQueryTextChange(queryString: String?): Boolean {
+                adapter.filter.filter(queryString)
+                if (queryString != null) {
+                    adapter.onChange(queryString)
+                }
+
+                return false
+            }
+        })
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_search -> {
+            true
+        }
+        else -> {
+            // If we got here, the user's action was not recognized.
+            // Invoke the superclass to handle it.
+            super.onOptionsItemSelected(item)
+        }
     }
 }

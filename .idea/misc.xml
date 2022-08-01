@@ -17,12 +17,16 @@
         <entry key="app/src/main/res/font/roboto_family.xml" value="0.35444330949948927" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.21165048543689322" />
         <entry key="app/src/main/res/layout/attachment_layout.xml" value="0.271286231884058" />
+        <entry key="app/src/main/res/layout/bottom_sheet_profile_picture.xml" value="0.25" />
         <entry key="app/src/main/res/layout/chat_fragment.xml" value="0.264" />
         <entry key="app/src/main/res/layout/chat_outer_item.xml" value="0.264" />
         <entry key="app/src/main/res/layout/contact_item.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/contacts_fragment.xml" value="0.23822463768115942" />
+        <entry key="app/src/main/res/layout/different_user_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/different_user_profile_fragment.xml" value="0.24169184290030213" />
         <entry key="app/src/main/res/layout/facebook_login_fragment.xml" value="0.14228052472250252" />
         <entry key="app/src/main/res/layout/find_user_fragment.xml" value="0.2427536231884058" />
+        <entry key="app/src/main/res/layout/friend_item.xml" value="0.264" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.4" />
         <entry key="app/src/main/res/layout/home_fragment_layout.xml" value="0.1287037037037037" />
         <entry key="app/src/main/res/layout/incoming_chat_file_item.xml" value="0.3229166666666667" />
@@ -34,6 +38,7 @@
         <entry key="app/src/main/res/layout/login_fragment.xml" value="0.264" />
         <entry key="app/src/main/res/layout/no_incoming_requests.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/notification_badge_layout.xml" value="0.536" />
+        <entry key="app/src/main/res/layout/profile_fragment.xml" value="0.18614130434782608" />
         <entry key="app/src/main/res/layout/received_audio_item.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/received_request_item.xml" value="0.3229166666666667" />
         <entry key="app/src/main/res/layout/sent_audio_item.xml" value="0.3229166666666667" />

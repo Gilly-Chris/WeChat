@@ -112,7 +112,7 @@ class ContactsAdapter(private val itemClickCallback: ItemClickCallback) : ListAd
             }
 
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
-                val mutableList = results?.values as MutableList<User>
+                val mutableList = if(results?.values !=  null) results?.values as MutableList<User> else mutableListOf()
                 submitList(mutableList)
                 notifyItemRangeChanged(0, mutableList.size)
             }

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="user"
             type="com.example.wechat.data.model.User" />
@@ -36,8 +35,9 @@
             android:layout_marginStart="10dp"
             android:ellipsize="end"
             android:maxLines="1"
+            android:layout_marginTop="4dp"
             android:text="@{user.username}"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/profileImageView"
             app:layout_constraintTop_toTopOf="@+id/profileImageView"
@@ -50,7 +50,7 @@
             android:layout_marginStart="10dp"
             android:ellipsize="end"
             android:maxLines="1"
-            android:text="@{user.bio}"
+            android:text="@{user.bio != null? user.bio : @string/no_bio_yet}"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             app:layout_constraintBottom_toBottomOf="@+id/profileImageView"
             app:layout_constraintEnd_toEndOf="parent"

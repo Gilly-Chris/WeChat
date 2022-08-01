@@ -55,4 +55,5 @@
     <string name="facebook_client_token">a275d921ca0a9305123dc07471b10f4e</string>
     <string name="fb_login_protocol_scheme">fb1039249406417764</string>
     <string name="sign_in">Sign in</string>
+    <string name="no_bio_yet">No bio yet</string>
 </resources>

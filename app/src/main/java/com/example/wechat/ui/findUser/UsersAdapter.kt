@@ -24,11 +24,11 @@ class UsersAdapter(private val clickListener: UserClickListener) : ListAdapter<U
     var userList = mutableListOf<User?>()
     var filteredUserList = mutableListOf<User?>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder.from(parent)
     }
 
-    override fun onBindViewHolder(holder: UsersAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
         holder.bind(clickListener, item)
     }

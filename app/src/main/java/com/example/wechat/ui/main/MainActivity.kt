@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Process
-import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -12,20 +11,21 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
+import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI.navigateUp
 import androidx.navigation.ui.setupWithNavController
-import com.example.wechat.R
 import com.example.wechat.Util.eventbus_events.CallbackManagerEvent
 import com.example.wechat.Util.eventbus_events.ConnectionChangeEvent
 import com.example.wechat.Util.eventbus_events.KeyboardEvent
 import com.example.wechat.databinding.ActivityMainBinding
 import com.facebook.CallbackManager
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.auth.FirebaseAuth
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
+import com.example.wechat.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         var navController: NavController = navHostFragment.navController
 
         //setup toolbar with navigation
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.chatFragment, R.id.homeFragment))
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment))
         findViewById<Toolbar>(R.id.toolbar)
             .setupWithNavController(navController, appBarConfiguration)
     }

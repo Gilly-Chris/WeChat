@@ -5,12 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.wechat.Util.FirestoreUtil
 import com.example.wechat.data.model.User
+import com.example.wechat.ui.different_user_profile.RECEIVED_REQUEST_ARRAY
+import com.example.wechat.ui.different_user_profile.SENT_REQUEST_ARRAY
 import com.google.firebase.firestore.FieldValue
 
 const val FRIENDS = "friends"
 
 class IncomingRequestsViewModel : ViewModel() {
-
     private val usersRef = FirestoreUtil.firestoreInstance.collection("users")
     private val friendRequestersMutableLiveData = MutableLiveData<MutableList<User>?>()
 
@@ -22,7 +23,6 @@ class IncomingRequestsViewModel : ViewModel() {
                 val user = it?.toObject(User::class.java)
                 user?.let { it1 -> friendRequesters.add(it1) }
                 friendRequestersMutableLiveData.value = friendRequesters
-
             }.addOnFailureListener {
                 friendRequestersMutableLiveData.value = null
             }
@@ -56,7 +56,6 @@ class IncomingRequestsViewModel : ViewModel() {
         requesterId: String,
         loggedUserId: String
     ) {
-
         //remove id from sentRequest array for logged in user
         FirestoreUtil.firestoreInstance.collection("users").document(loggedUserId)
             .update(RECEIVED_REQUEST_ARRAY, FieldValue.arrayRemove(requesterId))

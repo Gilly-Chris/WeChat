@@ -25,7 +25,11 @@
             app:destination="@id/contactsFragment" />
         <action
             android:id="@+id/action_homeFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -59,6 +63,7 @@
         android:id="@+id/incomingRequestsFragment"
         android:name="com.example.wechat.ui.incoming_requests.IncomingRequestsFragment"
         android:label="IncomingRequestsFragment" />
+
     <fragment
         android:id="@+id/contactsFragment"
         android:name="com.example.wechat.ui.contacts.ContactsFragment"

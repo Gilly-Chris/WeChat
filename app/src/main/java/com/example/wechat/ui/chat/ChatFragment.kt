@@ -17,10 +17,7 @@ import android.os.Environment
 import android.provider.Settings
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.view.WindowManager
+import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -77,7 +74,7 @@ class ChatFragment : Fragment() {
         ChatAdapter(context, object : MessageClickListener {
             override fun onMessageClick(position: Int, message: Message) {
                 //if clicked item is image open in full screen with pinch to zoom
-                if (message.type == 1.0) {
+                if(message.type == 1.0) {
                     binding.fullSizeImageView.visibility = View.VISIBLE
                     StfalconImageViewer.Builder(
                         activity!!,
@@ -163,7 +160,7 @@ class ChatFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        activity!!.actionBar?.setDisplayHomeAsUpEnabled(true)
         //setup bottomsheet
         mBottomSheetBehavior = BottomSheetBehavior.from(binding.bottomSheet)
 
@@ -178,7 +175,7 @@ class ChatFragment : Fragment() {
         //get receiver data from contacts fragment(NOTE:IF NAVIGATING FROM FCM-NOTIFICATION USER ONLY HAS id,username)
         clickedUser = gson.fromJson(arguments?.getString(CLICKED_USER), User::class.java)
 
-        activity?.title = "Chatting with ${clickedUser.username}"
+        activity?.title = "${clickedUser.username}"
 
         //user viewmodel factory to pass ids on creation of view model
         if (clickedUser.uid != null) {
@@ -276,7 +273,7 @@ class ChatFragment : Fragment() {
             if (isRecord) {
                 //record message
                 if (isRecording) {
-                    //chnage size and color or button so user know its finished recording
+                    //change size and color or button so user know its finished recording
                     val regainer = AnimatorInflater.loadAnimator(
                         context,
                         R.animator.regain_size
@@ -359,7 +356,7 @@ class ChatFragment : Fragment() {
             showPlaceholderFile(filePath)
 
             //chat file was uploaded now store the uri with the message
-            viewModel.uploadChatFileByUri(filePath).observe(this, Observer { chatFileMap ->
+            viewModel.uploadChatFileByUri(filePath).observe(this,  { chatFileMap ->
                 viewModel.sendMessage(
                     FileMessage(
                         loggedUser.uid,
@@ -530,5 +527,9 @@ class ChatFragment : Fragment() {
     @Subscribe(threadMode = ThreadMode.MAIN)
     fun onRecycleItemEvent(event: UpdateRecycleItemEvent) {
         adapter.notifyItemChanged(event.adapterPosition)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
     }
 }

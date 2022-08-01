@@ -67,7 +67,6 @@ class HomeViewModel : ViewModel() {
                                                 chatParticipantList.add(chatParticipant)
                                                 chatParticipantsListMutableLiveData.value =
                                                     chatParticipantList
-
                                             }.addOnFailureListener {
 
                                             }

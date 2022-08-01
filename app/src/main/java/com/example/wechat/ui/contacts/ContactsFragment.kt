@@ -10,7 +10,6 @@ import androidx.databinding.DataBindingUtil
 import com.example.wechat.databinding.ContactsFragmentBinding
 import com.example.wechat.ui.main.MainViewModel
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.wechat.R
@@ -30,6 +29,7 @@ class ContactsFragment : Fragment() {
     companion object {
         fun newInstance() = ContactsFragment()
     }
+
     private lateinit var viewModel: ContactsViewModel
     private lateinit var adapter: ContactsAdapter
     private lateinit var sharedViewModel: MainViewModel

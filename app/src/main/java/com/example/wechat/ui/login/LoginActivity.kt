@@ -57,7 +57,6 @@ class LoginActivity : AppCompatActivity() {
                 } else {
                     binding.email.isErrorEnabled = false
                 }
-
             })
         }
 

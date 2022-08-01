@@ -34,7 +34,7 @@
             android:layout_marginStart="16dp"
             android:ellipsize="end"
             android:fontFamily="@font/roboto_regular"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             android:maxLines="2"
             android:text="@{user.username}"
             app:layout_constraintEnd_toEndOf="parent"

@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.example.wechat.Util.AuthUtil
 import com.example.wechat.Util.FirestoreUtil
 import com.example.wechat.data.model.User
+import com.example.wechat.ui.incoming_requests.FRIENDS
 import com.google.firebase.firestore.EventListener
 
 class FindUserViewModel : ViewModel(){
@@ -25,21 +26,20 @@ class FindUserViewModel : ViewModel(){
 
 //            exclude friends of currently logged in user
             docRef.whereArrayContains(FRIENDS, AuthUtil.getAuthId())
-                .addSnapshotListener(
-                    EventListener { querySnapshot, firebaseFirestoreException ->
-                        if (firebaseFirestoreException == null) {
-                            val documents = querySnapshot?.documents
-                            if (documents != null) {
-                                for (document in documents) {
-                                    val user = document.toObject(User::class.java)
-                                    result.remove(user)
-                                }
-                                userDocumentsMutableLiveData.value = result
+                .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+                    if (firebaseFirestoreException == null) {
+                        val documents = querySnapshot?.documents
+                        if (documents != null) {
+                            for (document in documents) {
+                                val user = document.toObject(User::class.java)
+                                result.remove(user)
                             }
-                        } else {
-                            userDocumentsMutableLiveData.value = null
+                            userDocumentsMutableLiveData.value = result
                         }
-                    })
+                    } else {
+                        userDocumentsMutableLiveData.value = null
+                    }
+                }
         }.addOnFailureListener {
             userDocumentsMutableLiveData.value = null
             }

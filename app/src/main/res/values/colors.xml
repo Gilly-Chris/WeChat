@@ -8,6 +8,7 @@
     <color name="secondary_700">#790e8b</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="black_light">#efefef</color>
 
 <!--    addition-->
     <color name="red">#EE4B4B</color>
