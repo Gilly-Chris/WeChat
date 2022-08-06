@@ -29,3 +29,4 @@ Features:<br>
 
 #screenshots<br>
 
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot%20from%202022-07-31%2010-52-01.png" width="200">
