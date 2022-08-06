@@ -1,5 +1,5 @@
 # WeChat
-Anroid chat applications that supports realtime notifications, audio messages, image and file sharing
+Android chat application with realtime notifications, audio messages, image and file sharing using google firebase
 
 Used technologies:<br>
 -------------------
