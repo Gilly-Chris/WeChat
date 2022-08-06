@@ -29,4 +29,15 @@ Features:<br>
 
 #screenshots<br>
 
-<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot%20from%202022-07-31%2010-52-01.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104658.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104551.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104526.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104518.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104309.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-103050.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-103041.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-103033.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-103028.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-102946.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-102939.png" width="200">
+<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-102918.png" width="200">
