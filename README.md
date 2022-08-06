@@ -29,8 +29,8 @@ Features:<br>
 
 #screenshots<br>
 
-<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104658.png" width="200">
-<img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104551.png" width="200">
+<span><img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104658.png" width="200"></span>
+<span><img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104551.png" width="200"></span>
 <img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104526.png" width="200">
 <img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104518.png" width="200">
 <img src="https://github.com/Gilly-Chris/WeChat/blob/dev/screenshots/Screenshot_20220731-104309.png" width="200">
